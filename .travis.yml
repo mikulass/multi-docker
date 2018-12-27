@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker buiild -t mikulass/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t mikulass/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run mikulass/react-test npm run test -- --coverage
